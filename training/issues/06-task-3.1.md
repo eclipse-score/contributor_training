@@ -28,4 +28,4 @@ In the S-CORE process description (https://eclipse-score.github.io/process_descr
 - the work product (`wp__...`),
 - the template or guideline the module uses for it.
 
-**Done when** a merged pull request records the chain workflow → work product → template on your participant page, as `:need:` references. The build checks that each reference exists.
+**Done when** a merged pull request records the chain workflow → work product → template on your participant page, as `:need:` references, written ``:need:`<id>` `` with the real id. You reference needs that exist; you do not create a need of your own. The build checks that each reference exists.

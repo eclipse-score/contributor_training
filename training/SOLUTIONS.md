@@ -126,6 +126,13 @@ plan, module security plan.
 Re-checked 2026-10-29 on `4dc60d8` with `main` + r1, r2, r3, r5-security, then r4: the same
 three conflicts.
 
+What the simulations missed, found in the first run of the Qorix version of this training
+(2026-10): the `id` instruction line #R4 changes reads like a typo ("upper snake case", `doc_`), and
+three of five participants picked it as their self-found typo in task 1.3, or aligned it with the
+header in their #R1 fix. #R4 then conflicted with `main` before 5.3 began. Tasks 1.2-1.3 and 4.1
+now say to leave the `.. attention::` blocks alone until stage 5, and 5.3 says what to do if #R4
+conflicts anyway: rebase #R4's branch onto `main` first and resolve it there.
+
 ### PR #R5 (task 6.1) — cross-review
 
 A participant reviews the variant that is **not** their track: Quality and Security participants get

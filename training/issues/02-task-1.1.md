@@ -22,7 +22,7 @@ labels: stage-1
 ---
 Your repository was made from the public S-CORE module template. Find out whether the template has moved on since, and practise both ways of following an upstream.
 
-1. `git fetch upstream` and compare `main` with `upstream/main`. Which commits are new upstream, and which files do they touch?
+1. `git fetch upstream` and compare `main` with `upstream/main`. Which commits are new upstream, and which files do they touch? (`git log --oneline main..upstream/main` lists the commits, `git diff --stat main upstream/main` the files.)
 2. Fork the **public** `eclipse-score/module_template` into your **own** GitHub account and use "Sync fork" on it.
 3. Explain the difference between the two ways, and which one you will use when you contribute to an S-CORE repository. The S-CORE contribution guideline says how contributions reach a repository.
 

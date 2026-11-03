@@ -72,6 +72,7 @@ You need a GitHub account, `git`, and `gh` logged in (`gh auth login`).
    git pull
    git remote add upstream https://github.com/eclipse-score/module_template.git
    pre-commit install
+   git config commit.template .gitmessage
    rm -rf _build && bazel run //:docs
    ```
 
@@ -113,9 +114,21 @@ Plan about **five working days**. Every task is an issue in your copy, labelled 
    with a word, not with a task number: a title like "2.3 …" counts as a task, not as your
    finding.
 3. **The commit carries the reasoning.** Say what you checked and what it returned. In S-CORE a
-   reviewer reads your pull request without you in the room; the reasoning has to be in it.
+   reviewer reads your pull request without you in the room; the reasoning has to be in it. No
+   check enforces this; the commit message template `.gitmessage` reminds you of it on every
+   commit (set up in "Set up your copy").
 4. **You merge your own pull requests** once CI is green. Nobody reviews your copy: the closed
    issues and pull requests are your own record of what you did.
+
+## What `valid` means in a pull request
+
+The status a pull request sets is the status the need gets **when that pull request is approved
+and merged**: the approval releases what is written. So set `valid` on your branch when the content
+is ready to be released as it stands, and leave it `draft` while it still says TBD or has an open
+value. The module templates' "Adjust `status` to be `valid`" means exactly this.
+
+Requirements know only `valid` and `invalid`. The S-CORE requirements concept explains why: a
+requirement is a draft as long as its pull request is not merged, so no separate status is needed.
 
 ## Certificate
 
@@ -143,6 +156,7 @@ There is no support, so here is what to do yourself.
 | `main` is broken and you cannot find why | `git log` and `git revert` the merge that broke it, in a pull request. Finding that merge is a good exercise. |
 | The copy is beyond repair | Delete the repository, make a new copy and run the setup again. Your progress is in the old copy's issues; read them before you delete it. |
 | Actions minutes run out (private copies) | A free account has 2,000 minutes a month; the training needs a few hundred. Wait for the next month or make the copy public. |
+| Rebasing or resolving a conflict is new to you (task 5.3) | Read "Git Branching - Rebasing" in the Pro Git book: https://git-scm.com/book/en/v2/Git-Branching-Rebasing. |
 | A task text is wrong, or a defect does not behave as described | That is a bug in the training: report it (below), work around it, and say so in your pull request. |
 
 ## Feedback, bugs and questions
