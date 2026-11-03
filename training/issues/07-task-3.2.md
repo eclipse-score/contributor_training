@@ -24,4 +24,4 @@ The process description defines the process. The S-CORE project decides how it a
 
 Then create **one issue** with the "Task (S-CORE form)" form for something you found unclear. It is an open point, so it needs an **owner** (the S-CORE role that can answer it, from the table in `TRAINING.md`) and a **trigger** (the event after which it can be answered). An open point without both is a defect.
 
-**Done when** a merged pull request records the finding with its need id or link on your participant page and closes your open-point issue, either with the answer or with the open point recorded there with its owner and trigger.
+**Done when** a merged pull request records the finding on your participant page with a `:need:` reference to the need it concerns, as in task 3.1, or with a link (you reference what exists, you do not create a need), and closes your open-point issue, either with the answer or with the open point recorded there with its owner and trigger.

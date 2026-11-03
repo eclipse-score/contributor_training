@@ -22,6 +22,6 @@ labels: stage-5
 ---
 Your document: **{{ROLE_DOC}}**, now on the current template state after tasks 5.1-5.3.
 
-Fill it in for `Training_Module`: replace the placeholders and follow the instructions in the `.. attention::` blocks. Read what is already written in it, too. Not everything a predecessor wrote there is right.
+Fill it in for `Training_Module`: replace the placeholders and follow the instructions in the `.. attention::` blocks. Read what is already written in it, too. Not everything a predecessor wrote there is right. A statement is not right because it is already there: for each one, look for its source (the template, the process description, the standard, a decision record). Keep what has one, correct what contradicts its source, and raise a finding for what has none.
 
 **Done when** a merged pull request leaves the document without placeholders, the build is green, and nothing wrong from the existing text survives. If something already in it is wrong, raise an issue for it first.
