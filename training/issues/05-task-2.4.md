@@ -24,11 +24,11 @@ The branches `defect/build-1`, `defect/build-2` and `defect/build-3` each contai
 
 For each branch:
 
-1. Build it (`bazel run //:docs`) and run `pre-commit run --all-files`.
+1. Switch to it (`git switch defect/build-1`) and build it (`bazel run //:docs`) and run `pre-commit run --all-files`.
 2. Create **one issue per defect** with the "Bug (S-CORE form)" form. Quote the message.
 3. Fix the defects in a pull request into `main` that closes those issues.
 
-`defect/build-3` builds green. Build `main` first, then switch to `defect/build-3` and build again, and look at `_build/module/manuals/`. Explain what you see. **Do not merge `defect/build-3`**: record your explanation on your participant page instead, in a pull request that closes your issue for it.
+`defect/build-3` builds green. Build `main` first (`git switch main && git pull`, so that your local `main` has what you merged on GitHub), then switch to `defect/build-3` and build again, and look at `_build/module/manuals/`. Explain what you see. **Do not merge `defect/build-3`**: record your explanation on your participant page instead, in a pull request that closes your issue for it.
 
 A green docs build is not the same as a green CI.
 

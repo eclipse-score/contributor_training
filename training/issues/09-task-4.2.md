@@ -27,4 +27,4 @@ Review it for content. Check every claim against the rule or standard clause it 
 - One review comment per finding, and **one issue per finding** with the "Bug (S-CORE form)" form.
 - Finish with a review of type **Comment** that states your decision, as in task 4.1.
 
-**Done when** a pull request of yours fixes the findings, closes their issues and is merged. Close #{{PR_R2}} without merging it.
+**Done when** a pull request of yours fixes the findings, closes their issues and is merged. Close #{{PR_R2}} first, without merging it, and merge your own pull request after that: your branch contains its commit, and if yours reaches `main` first, GitHub marks #{{PR_R2}} as merged by itself, and a merged pull request cannot be closed any more.

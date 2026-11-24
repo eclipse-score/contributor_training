@@ -22,4 +22,4 @@ labels: stage-6
 ---
 Pull request #{{PR_R5}} belongs to another track. Review it for content as in task 4.2: one comment per finding, and a decision at the end.
 
-**Done when** your review is submitted and a pull request of yours fixes your findings and is merged. Close #{{PR_R5}} without merging it.
+**Done when** your review is submitted and a pull request of yours fixes your findings and is merged. Close #{{PR_R5}} first, without merging it, and merge your own pull request after that: your branch contains its commit, and if yours reaches `main` first, GitHub marks #{{PR_R5}} as merged by itself, and a merged pull request cannot be closed any more.
