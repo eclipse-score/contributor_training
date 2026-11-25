@@ -784,8 +784,8 @@
     "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_bazel_platforms/0.0.3/MODULE.bazel": "14c96e378c08705a46abe0799d6236fe3095c342c34f83f8d1b3f6046ce00651",
     "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_bazel_platforms/1.1.0/MODULE.bazel": "e5c656abcad121a89cbabad3550bb20167a6865de219ef6e1c68ca30567e1c32",
     "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_bazel_platforms/1.1.0/source.json": "9797d56e9dd68e9d3e8b674402df2d6d5e2174f84184ca4cbee78fc07dc117d9",
-    "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_cpp_policies/0.1.1/MODULE.bazel": "62968745a2fe77c449d4e11447b50918c58f870eeac72f0f3198c63617a2f8a2",
-    "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_cpp_policies/0.1.1/source.json": "29d45fbd6f3fae0a21487f5d652dfa0796bd2095d2a19732a5456e5b232754a9",
+    "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_cpp_policies/0.1.3/MODULE.bazel": "31d054963282ec91ef467b021a223ac35e978be4b5903bd1fb2763798b87f7fc",
+    "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_cpp_policies/0.1.3/source.json": "c30872cbde3b297e877e62794418852900b0aadbd71aee3031a09a2ad454480d",
     "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_cr_checker/0.2.2/MODULE.bazel": "dc36d9c35543db918c3fb5b93a8e684431f56c7c784cf2a1b90f35802a373c98",
     "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_cr_checker/0.3.1/MODULE.bazel": "f49e037d7fbc0b2a8b2734fc6b47334e8cc8589ca7a5aa0f3ccca85cc5f79fac",
     "https://raw.githubusercontent.com/eclipse-score/bazel_registry/main/modules/score_dash_license_checker/0.1.1/MODULE.bazel": "76681dbd2d45b5c540869a2337174086c56c54953aab1d02cd878b59d31d13a5",
@@ -3794,7 +3794,7 @@
     "@@score_bazel_cpp_toolchains+//extensions:gcc.bzl%gcc": {
       "general": {
         "bzlTransitiveDigest": "muOim1Y4TLSENpinhZF/JtW1n+MCplZTMixloQg5zbI=",
-        "usagesDigest": "I5884K0MzTutS9ShDT7kU/rfU7wXKIn15iA5wpaHSqY=",
+        "usagesDigest": "AszvlerV9tb/EOmjXYBgDZ7WT0cr58LRyUCX0r65z3U=",
         "recordedInputs": [
           "REPO_MAPPING:,score_cpp_policies score_cpp_policies+",
           "REPO_MAPPING:bazel_tools,rules_cc rules_cc+",
@@ -3929,7 +3929,13 @@
               "extra_cxx_compile_flags": [],
               "extra_known_features": [
                 "@@score_cpp_policies+//warnings/gcc/features:strict_warnings",
-                "@@score_cpp_policies+//warnings/gcc/features:all_wall_warnings"
+                "@@score_cpp_policies+//warnings/gcc/features:all_wall_warnings",
+                "@@score_cpp_policies+//sanitizers/features:asan",
+                "@@score_cpp_policies+//sanitizers/features:debug_symbols",
+                "@@score_cpp_policies+//sanitizers/features:lsan",
+                "@@score_cpp_policies+//sanitizers/features:tsan",
+                "@@score_cpp_policies+//sanitizers/features:ubsan_base",
+                "@@score_cpp_policies+//sanitizers/features:ubsan_gcc"
               ],
               "extra_enabled_features": [
                 "@@score_cpp_policies+//warnings/gcc/features:minimal_warnings",
@@ -3961,7 +3967,13 @@
               "extra_cxx_compile_flags": [],
               "extra_known_features": [
                 "@@score_cpp_policies+//warnings/gcc/features:strict_warnings",
-                "@@score_cpp_policies+//warnings/gcc/features:all_wall_warnings"
+                "@@score_cpp_policies+//warnings/gcc/features:all_wall_warnings",
+                "@@score_cpp_policies+//sanitizers/features:asan",
+                "@@score_cpp_policies+//sanitizers/features:debug_symbols",
+                "@@score_cpp_policies+//sanitizers/features:lsan",
+                "@@score_cpp_policies+//sanitizers/features:tsan",
+                "@@score_cpp_policies+//sanitizers/features:ubsan_base",
+                "@@score_cpp_policies+//sanitizers/features:ubsan_gcc"
               ],
               "extra_enabled_features": [
                 "@@score_cpp_policies+//warnings/gcc/features:minimal_warnings",
